@@ -5,7 +5,8 @@ public class EveryThingStrings {
 
     public static void main(String args[]) {
         System.out.print("Everyting Strings");
-        StringClass s= new StringClass();
+        //StringClass s= new StringClass();
+        StringBufferClass s= new StringBufferClass();
         s.Disp();
         
     }
@@ -35,6 +36,26 @@ public class EveryThingStrings {
             System.out.println("ends with :"+s.startsWith("ava"));
             System.out.println(s+"compared to bhagi :"+s.compareTo("bhagi"));
             System.out.println(s+"compared to bhagi ignore case :"+s.compareToIgnoreCase("bhagi"));
+            System.out.println("replace a with *"+s.replace('a', '*'));
+            System.out.println("sub string : "+s.substring(0,5));
         }
+
     }
+    /**
+     * StringBufferClass
+     */
+    public static class StringBufferClass {
+    
+        void Disp(){
+        StringBuffer s=new StringBuffer("Bhargava");
+        System.out.println("length :"+s.length());
+        System.out.println("capacity :"+s.capacity());
+        System.out.println("reverse :"+s.reverse());
+        System.out.println("append :"+s.append(s));
+        System.out.println("length :"+s.length());
+        
+        
+        
+    }
+}
 }
